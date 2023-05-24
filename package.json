@@ -2,7 +2,7 @@
   "name": "crossplatdev",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,10 @@
   "author": "Mirae Yu & Tumurtulga Batjargal",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.0-alpha3"
+    "bootstrap": "^5.3.0-alpha3",
+    "electron": "^5.0.13",
+    "electron-builder": "^5.0.3",
+    "electron-packager": "^5.2.0",
+    "uuid": "^3.3.2"
   }
 }
