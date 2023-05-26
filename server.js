@@ -1,6 +1,7 @@
 'use strict';
 
 const electron = require('electron');
+const ejse = require('ejs-electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
@@ -12,12 +13,8 @@ app.on('window-all-closed', () => {
 
 app.on('ready', function () {
     mainWindow = new BrowserWindow({
-        userContentSize: true,
-        width: 800,
-        height: 600,
-        resizable: false,
-        fullscreen: false,
+
     });
-    mainWindow.loadURL(`file://${__dirname}/views/index.html`);
+    mainWindow.loadURL(`file://` + __dirname + `/views/index.ejs`);
     mainWindow.on('closed', () => { mainWindow = null; });
 });
